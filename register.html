@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account - Mbarara University Portal</title>
+
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="wrapper">
+    <!-- Brand Header -->
+    <header class="brand-header">
+      <div class="logo-badge">
+        <img 
+          src="https://applications.must.ac.ug/dist/img/campus_logo.png" 
+          alt="MUST Badge"
+        />
+      </div>
+      <h1 class="brand-title">Mbarara University of<br>Science and Technology</h1>
+      <span class="portal-pill">Online Application Portal</span>
+    </header>
+
+    <!-- Create Account Card -->
+    <section class="card">
+      <h2>Create Account</h2>
+      <p class="subtext">Enter your details to receive your temporary password</p>
+
+      <form method="POST" action="/register">
+        <div class="form-group">
+          <label for="reg-surname">Surname</label>
+          <div class="input-box">
+            <i class="fa-solid fa-user icon" aria-hidden="true"></i>
+            <input type="text" id="reg-surname" name="surname" placeholder="Surname" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-othernames">Other Names</label>
+          <div class="input-box">
+            <i class="fa-solid fa-user-tag icon" aria-hidden="true"></i>
+            <input type="text" id="reg-othernames" name="othernames" placeholder="Other names" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-phone">Phone Number</label>
+          <div class="phone-input-group">
+            <div class="input-box">
+              <select name="dial_code" aria-label="Country Dial Code">
+                <option value="+256">UG (+256)</option>
+                <option value="+254">KE (+254)</option>
+                <option value="+255">TZ (+255)</option>
+                <option value="+250">RW (+250)</option>
+                <option value="+257">BI (+257)</option>
+                <option value="+211">SS (+211)</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <i class="fa-solid fa-phone icon" aria-hidden="true"></i>
+              <input type="tel" id="reg-phone" name="phone" placeholder="770 000 000" pattern="[0-9]{9,10}" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reg-email">Email Address</label>
+          <div class="input-box">
+            <i class="fa-regular fa-envelope icon" aria-hidden="true"></i>
+            <input type="email" id="reg-email" name="email" placeholder="name@example.com" required autocomplete="email" />
+          </div>
+          <a href="https://accounts.google.com/signup" target="_blank" rel="noopener noreferrer" class="email-link">
+            Don't have an email? Click to create →
+          </a>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="margin-top: 10px;">
+          <i class="fa-solid fa-user-check"></i> Register Account
+        </button>
+      </form>
+
+      <div class="divider">
+        <span>Already registered?</span>
+      </div>
+
+      <!-- Links back to index.html -->
+      <a href="index.html" class="btn btn-outline">
+        <i class="fa-solid fa-arrow-left"></i> Back to Login
+      </a>
+    </section>
+  </main>
+
+</body>
+</html>
